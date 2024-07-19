@@ -1,0 +1,46 @@
+Git is a version control and source code management tool used to track changes to the source code and for rollback to previous versions etc. Git is an example of a DVCS (Distributed Version Control System). It is different from CVS (Centralized Version Control) or Subversion (also known as SVN). In Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.
+Version Control:
+Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control software keeps track of every modification to the code in a special kind of database.
+
+•	Multiple developers will work for project development
+•	Developers will be working from multiple locations
+•	All developers’ code should be stored at one place (Code Integration Should Happen)
+•	To integrate all the developers’ source code at one place we will use Source Code Repository Software
+
+Benefits of version control systems:
+●	A complete long-term change history of every file. This means every change made by many individuals over the years. Changes include the creation and deletion of files as well as edits to their contents. Having the complete history enables going back to previous versions to help in root cause analysis for bugs and it is crucial when needing to fix problems in older versions of software.
+●	Creating a "branch" in VCS tools keeps multiple streams of work independent from each other while also providing the facility to merge that work back together, enabling developers to verify that the changes on each branch do not conflict.
+
+1) All the developers can connect to repository server and can integrate the code
+2) Code Integration will become easy
+3) Repository server will provide monitored access
+			- Who - When - Why- What
+
+Source code management:
+SCM tools provides a suite of helpful features to make collaborative code development a more user-friendly experience. This is an essential requirement for projects that involve multiple developers working on the same piece of application. Once SCM has started tracking all the changes to a project over time, a detailed historical record of the project’s life is created. This historical record can then be used to ‘undo’ changes to the codebase. The SCM can instantly revert the codebase back to a previous point in time.
+Different vendors offer centralized code storage services integrated with git. Some of the popular services include:
+●	GitHub (Microsoft) 
+●	Bitbucket (Atlassian) 
+●	GitLab 
+●	Code Commit (AWS)
+Environment Setup to work with Git Hub
+1) Create Github account ( www.github.com )
+2) Download and install Git Client software ( https://git-scm.com/downloads )
+(or) use command ‘sudo yum install git –y’
+3) Once installation completed, right click on the mouse and verify git options display (If git options displaying our git client installation completed successfully)
+
+We can create 2 types of Repositories in Git Hub
+1) Public repository: Public Repository means everybody can access but we can choose who can modify our repository
+2) Private repository: Private Repository means we will choose who can access and who can modify
+
+Setting up a repository:
+If setting up a repository from your local project folder, we need to first cd into the root directory of the project and then execute ‘git init’ command. Orelse we can simply pass the directory as an argument to the command without having to move to the directory.
+●	git init <project_directory>
+More often, the project will be initialized in a central repository and we have to copy it into our local environment. In such cases we use the following command.
+●	git clone <repository_url>
+This creates a copy of the existing central repository in our local system and we can work on it.
+Configuration & set up: git config:
+By cloning a repository, a connection between the local and central repositories will be established by default. In case of initiating the local repository exclusively we need to add the link to central repository using the following command.
+●	git remote add origin <repository_url>
+Once we have mapped the remote repository, we can push our local branch changes to the remote repository using the following command.
+●	git push -u origin <local_branch_name>

@@ -1,0 +1,25 @@
+Docker is a platform that provides virtual containers on which an application can be deployed independent of the underlying OS of the server. Further the container can be created from a replica called docker image which contains all the dependencies and can run on any OS that has docker engine, with similar results.
+
+ 
+VIRTUALIZATION:
+Virtualization is the process of sharing hardware resources across several virtually isolated and mutually independent systems. It is achieved by using a hypervisor which acts as a bridge between the Operating System of each of the virtual machines and the underlying hardware.
+Applications in virtual environments run on a host operating system on top of the hypervisor.
+CONTAINERIZATION:
+Containerization refers to the process of creating virtually isolated instances of applications along with the required dependencies called containers. The containers so created are independent of the underlying operating system and are portable from one OS to the other. A container engine acts as a bridge between the containers and the underlying OS.
+
+	Docker containers run on Docker Engine which needs to be installed on the underlying Host operating system.
+	Docker containers with the desired configuration can be stored as an image called Docker Image and stored in a centralized registry. 
+	The images can be downloaded from the registry on any different server with another host operating system running docker engine. 
+	Multiple docker containers can be created on the destination server with the same desired configuration.
+ 
+DOCKER DAEMON:
+Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services.
+DOCKER CLIENT:
+The Docker client (docker) is the primary way that many Docker users interact with Docker. When you use commands such as docker run, the client sends these commands to dockerd, which carries them out. The docker command uses the Docker API. The Docker client can communicate with more than one daemon.
+DOCKER REGISTRIES:
+A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
+When you use the docker pull or docker run commands, the required images are pulled from your configured registry. When you use the docker push command, your image is pushed to your configured registry.
+Docker registry url: https://hub.docker.com
+Other Docker Registries are: AWS ECR,  Google GCR, Microsoft ACR, Harbor ..etc
+DOCKER OBJECTS:
+When you use Docker, you are creating and using images, containers, networks, volumes, plugins, and other objects. This section is a brief overview of some of those objects.
